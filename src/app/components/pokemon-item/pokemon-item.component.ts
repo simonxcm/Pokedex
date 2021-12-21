@@ -1,5 +1,6 @@
-import { ThisReceiver } from '@angular/compiler';
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, HostListener, Input, Output } from '@angular/core';
+import { Router } from '@angular/router';
+import { PokemonService } from 'src/app/services/pokemon.service';
 
 @Component({
   selector: 'app-pokemon-item',
@@ -7,47 +8,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pokemon-item.component.scss']
 })
 
-export class PokemonItemComponent implements OnInit {
+export class PokemonItemComponent {
 
-  nbCaught = 0;
-  addPokemonButton = false;
-  deletePokemonButton = false;
-  pokemonName = "";
-  currentAddTimeout : any;
-  constructor() { }
+  @Input() name: string | undefined;
 
-  ngOnInit(): void {
-
+  constructor(private pokemonService: PokemonService, private router: Router){
   }
 
-  pokemonNameChanged($event: Event) {
-
-    const inputElement = $event.target as HTMLInputElement;
-    this.pokemonName = inputElement.value;
+  @HostListener('click') click() {
+    this.goToPokemon;
   }
 
-  addPokemon($event: Event) {
-
-    console.log($event);
-    this.addPokemonButton = true;
-    this.deletePokemonButton = false;
-    this.nbCaught += 1;
+  goToPokemon(index : number){
+    this.router.navigate(['/pokemon', this.name]);
   }
 
-  deletePokemon($event: Event) {
-
-    console.log($event);
-    this.deletePokemonButton = true;
-    this.nbCaught -= 1;
-    if (this.nbCaught >= 1) {
-      this.addPokemonButton = true;
-    } else {
-      this.addPokemonButton = false;
-    }
-
-    if (this.currentAddTimeout) return;
-    this.currentAddTimeout = setTimeout(() => {
-      this.deletePokemonButton = false;
-    }, 3000);
+  remove($event: MouseEvent) {
+    $event.stopPropagation();
+    this.pokemonService.removePokemonByName(this.name);
   }
 }

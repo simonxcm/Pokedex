@@ -1,1 +1,45 @@
-<p>pokemon-list works!</p>
+<html>
+  <body>
+    <div >
+      <img class="pokemon-header" src="/assets/Medias/pokemon-banner.png" alt="pokemonheader">
+    </div>
+    <div class="center-and-margins">
+    <div class="pokemon-counter">
+      <span>
+        <img class="pokeball" src="/assets/Medias/pokeball2.png" alt="t">
+      </span>
+      <span>
+        <h1 class= "display-1" [ngClass]="{'is-blue': addPokemonButton}"> {{ nbCaught }} </h1>
+      </span>
+    </div>
+  </div>
+
+    <div class="center-and-margins">
+      <span>
+        <input type="text" placeholder="Type in a new Pokémon!" [(ngModel)]="pokemonName">
+      </span>
+    </div>
+
+
+
+    <div class="center-and-margins">
+      <button class="btn btn-info btn-lg white-text" (click)="addPokemon()">Add to the Pokédex</button>
+    </div>
+
+    <div class="center-and-margins" *ngIf = "addPokemonButton">
+      <p>Pokémon added successfully</p>
+    </div>
+
+    <div class="center-and-margins" *ngIf="addPokemonButton">
+      <div>
+        <app-pokemon-item  routerLink="/pokemon" class="box" [name]="pokemon" appBasicHighlight='lightgreen' defaultColor='transparent' *ngFor="let pokemon of pokemons"></app-pokemon-item>
+        <div class="center-and-margins" *ngIf="deletePokemonButton">
+          <p >{{ pokemonName }} removed!</p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
+
+

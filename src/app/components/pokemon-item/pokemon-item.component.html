@@ -1,15 +1,12 @@
-POKEMONS CAUGHT: {{ nbCaught }}
+<div  class="box">
 
-<input type="text" [(ngModel)]="pokemonName">
 
-<button (click)="addPokemon($event)">Add new pokémon</button>
+    <div class="pokemon-item">
+      <img class="pokeball" src="/assets/Medias/pokeball2.png" alt="t">
+      {{ name }}
+      <button  class="btn btn-outline-secondary btn-sm sticky-right"> Abandonner</button>
+    </div>
 
-<div *ngIf="addPokemonButton">
-  <p>{{ pokemonName }} added!</p>
-  <button (click)="deletePokemon($event)">Remove Pokémon</button>
+    <ng-content></ng-content>
+
 </div>
-
-<div *ngIf="deletePokemonButton"><p>{{ pokemonName }} removed!</p></div>
-
-
-

@@ -6,19 +6,28 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PokemonItemComponent } from './components/pokemon-item/pokemon-item.component';
 import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BasicHighlightDirective } from './directives/basic-highlight.directive';
+import { HomeComponent } from './pages/home/home.component';
+import { PokemonComponent } from './pages/pokemon/pokemon.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PokemonItemComponent,
-    PokemonListComponent
+    PokemonListComponent,
+    BasicHighlightDirective,
+    HomeComponent,
+    PokemonComponent,
   ],
   imports: [
     FormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

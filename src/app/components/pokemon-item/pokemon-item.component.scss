@@ -1,0 +1,43 @@
+@import '~bootstrap/scss/bootstrap';
+
+
+:host {
+  display: block;
+  transition: all 1s;
+  cursor: pointer;
+}
+
+.pokemon-item {
+  font-weight: bold;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.pokeball {
+  margin-right: 30px;
+}
+
+.box {
+  width: 400px;
+  height: 60px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: left;
+  position: relative;
+}
+
+.psa {
+  position: absolute;
+}
+
+.psr {
+  position: relative;
+}
+
+.sticky-right {
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+}
