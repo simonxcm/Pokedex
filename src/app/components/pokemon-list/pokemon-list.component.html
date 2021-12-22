@@ -30,7 +30,7 @@
     </div> -->
 
 
-      <div fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start" *ngIf="addPokemonButton">
+      <div fxLayout="row wrap" fxLayoutAlign="center" *ngIf="addPokemonButton">
           <app-pokemon-item fxFlex="0 1 auto" routerLink="/pokemon" class="" [name]="pokemon" appBasicHighlight='lightgreen' defaultColor='transparent' *ngFor="let pokemon of pokemons"></app-pokemon-item>
       </div>
   </body>
