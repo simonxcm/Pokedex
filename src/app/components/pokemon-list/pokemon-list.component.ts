@@ -25,7 +25,6 @@ export class PokemonListComponent implements OnInit{
   ngOnInit(): void {
   }
 
-
   generateBackgroundColor(){
 
     return this.nbCaught >= 5 ? '#00D679' : '#212529';

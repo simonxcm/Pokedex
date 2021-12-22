@@ -8,7 +8,7 @@
 .center-and-margins {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  margin: 20px 0 20px 0;
 }
 
 .is-blue {
@@ -20,13 +20,13 @@
 }
 
 .pokemon-counter {
-  width: 200px;
+  width: 400px;
   height: 100px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  border-radius: 10px;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  border-radius: 20px;
   display: flex;
   justify-content: center;
-  padding-top: 10px;
+  padding-top: 5px;
 }
 
 input {
@@ -37,7 +37,7 @@ input {
   color: white;
   font-size: 20px;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 20px;
 	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
@@ -55,6 +55,19 @@ input {
 	}
 }
 
+.add-button {
+  width: 350px;
+  height: 80px;
+  border: none;
+  font-weight: bold;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 20px;
+  margin-left: 30px;
+  background-color: lightgreen;
+}
+
 .pokeball {
   margin: 20px 30px 0 0;
 }
@@ -64,4 +77,9 @@ input {
     &hover {
       color: lightgreen;
     }
+}
+
+.pokemons-container {
+  width: 33%;
+  padding: 20px;
 }

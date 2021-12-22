@@ -10,6 +10,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BasicHighlightDirective } from './directives/basic-highlight.directive';
 import { HomeComponent } from './pages/home/home.component';
 import { PokemonComponent } from './pages/pokemon/pokemon.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { PokemonComponent } from './pages/pokemon/pokemon.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
