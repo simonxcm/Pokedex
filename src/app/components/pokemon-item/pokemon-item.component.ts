@@ -16,11 +16,12 @@ export class PokemonItemComponent {
   }
 
   @HostListener('click') click() {
-    this.goToPokemon;
+    this.goToPokemon();
   }
 
-  goToPokemon(index : number){
+  goToPokemon(){
     this.router.navigate(['/pokemon', this.name]);
+    console.log('toto');
   }
 
   remove($event: MouseEvent) {

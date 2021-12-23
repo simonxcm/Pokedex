@@ -1,8 +1,9 @@
 <div  class="box">
-  <div class="pokemon-item ">
-    <img class="pokeball" src="/assets/Medias/pokeball2.png" alt="t">
+  <div class="pokemon-item" (click)="goToPokemon()">
+    <img class="pokeball" src="/assets/Medias/pokeball2.png" alt="pokeball">
     {{ name }}
-    <button  class="btn btn-outline-secondary btn-sm sticky-right"> Abandonner</button>
-    <ng-content></ng-content>
+    <button class="btn btn-outline-secondary btn-sm sticky-right" (click)="remove($event)"> Abandonner</button>
+
   </div>
+  <ng-content></ng-content>
 </div>

@@ -18,8 +18,9 @@ export class PokemonService {
   }
 
   addPokemon(name: string) {
+    if (!name) return;
     this.pokemons.push(name);
-    this.storePokemonList
+    this.storePokemonList();
   }
 
   removePokemon(index: number) {
@@ -31,7 +32,19 @@ export class PokemonService {
     if (!name) {
       throw new Error('Pokemon Name should be set')
     }
-    this.pokemons.splice(this.pokemons.indexOf(name), 1);
+    const pokemonIndex = this.pokemons.indexOf(name);
+    this.removePokemon(pokemonIndex);
   }
 
+  getNextPokemonName(currentPokemonName: string | undefined) {
+    if(!currentPokemonName) throw new Error('Can\'t find pokemon');
+    const pokemonIndex = this.pokemons.indexOf(currentPokemonName);
+    return this.pokemons[pokemonIndex + 1];
+  }
+
+  getPreviousPokemonName(currentPokemonName: string | undefined) {
+    if(!currentPokemonName) throw new Error('Can\'t find pokemon');
+    const pokemonIndex = this.pokemons.indexOf(currentPokemonName);
+    return this.pokemons[pokemonIndex - 1];
+  }
 }

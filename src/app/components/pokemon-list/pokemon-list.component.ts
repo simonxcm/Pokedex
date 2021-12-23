@@ -38,6 +38,8 @@ export class PokemonListComponent implements OnInit{
 
   addPokemon() {
 
+    if (!this.pokemonName) return;
+
     this.addPokemonButton = true;
     this.deletePokemonButton = false;
     this.nbCaught += 1;

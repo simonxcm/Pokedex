@@ -1,0 +1,16 @@
+.pokemon-counter {
+  width: 400px;
+  height: 400px;
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
+}
+
+.center-and-margins {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 30px 0;
+}

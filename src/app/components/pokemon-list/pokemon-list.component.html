@@ -23,17 +23,12 @@
       </span>
     </div>
 
-
-
     <!-- <div class="center-and-margins" *ngIf = "addPokemonButton">
       <p>Pokémon added successfully</p>
     </div> -->
-
 
       <div fxLayout="row wrap" fxLayoutAlign="center" *ngIf="addPokemonButton">
           <app-pokemon-item fxFlex="0 1 auto" routerLink="/pokemon" class="" [name]="pokemon" appBasicHighlight='lightgreen' defaultColor='transparent' *ngFor="let pokemon of pokemons"></app-pokemon-item>
       </div>
   </body>
 </html>
-
-

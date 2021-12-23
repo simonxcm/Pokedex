@@ -10,7 +10,6 @@
 .pokemon-item {
   font-weight: bold;
   margin: 20px;
-  display: flex;
   align-items: center;
 }
 
@@ -22,7 +21,7 @@
   width: 200px;
   height: 200px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
-  border-radius: 10px;
+  border-radius: 20px;
   display: flex;
   justify-content: left;
   position: relative;
